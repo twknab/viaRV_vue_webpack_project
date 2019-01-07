@@ -8,35 +8,11 @@
 </head>
 <body>
   <div id="app">
-    <h1>Register</h1>
-    <fieldset>
-      <form action="" @submit="registerUser">
-        <input type="text" name="firstName" id="firstName" placeholder="First Name">
-        <br/>
-        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
-        <br/>
-        <input type="email" name="email" id="email" placeholder="Email">
-        <br/>
-        <input type="password" name="password" id="password" placeholder="Password">
-        <br/>
-        <input type="tel" name="PhoneNumber" id="PhoneNumber" placeholder="Phone Number">
-        <br/>
-        <input type="submit" value="Register">
-      </form>
-    </fieldset>
-    <h1>Login</h1>
-    <fieldset>
-      <form action="" @submit="loginUser">
-        <input type="email" name="email" id="login_email" placeholder="Email">
-        <br/>
-        <input type="password" name="password" id="login_password" placeholder="Password">
-        <br/>
-        <input type="submit" value="Login">
-      </form>
-    </fieldset>
+    <register @register-user="registerNewUser"></register>
+    <login @login-user="loginExistingUser"></login>
   </div>
 
-  <!-- If you don't put these at the bottom your DOM won't be rendered yet for Vue to hook into -->
+  <!-- Vue Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js"></script>
 </body>
