@@ -10,7 +10,7 @@
 
 <body>
   <div id="app">
-    <profile @update-user="updateUserProfile"></profile>
+    <profile @update-user="updateUserProfile" :logged-in-user="loggedInUser"></profile>
     <logout @logout-user="logoutUser"></logout>
   </div>
 
